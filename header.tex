@@ -1,0 +1,114 @@
+% Uncomment to enable anonymous submission
+%\newcommand*{\ANON}{}%
+% Uncomment to make the paper "submission-ready"
+\newcommand*{\SUBMISSION}{}%
+% Uncomment to make the paper "camera-ready"
+\newcommand*{\CAMERAREADY}{}
+
+\newcommand{\clouddate}{2024-03-26}
+
+\newcommand{\sev}{\ac{SEV}}
+\newcommand{\seves}{\ac{SEV}-\ac{ES}}
+\newcommand{\sevsnp}{\ac{SEV}-\ac{SNP}}
+\newcommand{\snp}{\ac{SNP}}
+\newcommand{\snpguest}{\texttt{snpguest}}
+\newcommand{\sevsnpmeasure}{\texttt{sev-snp-measure}}
+\newcommand{\dmintegrity}{\texttt{dm-integrity}}
+\newcommand{\dmverity}{\texttt{dm-verity}}
+\newcommand{\dmcrypt}{\texttt{dm-crypt}}
+\newcommand{\init}{\texttt{/init}}
+\newcommand{\vtpm}{\ac{vTPM}}
+\newcommand{\sevguest}{\texttt{/dev/sev-guest}}
+
+\ifdefined\SUBMISSION
+\usepackage[disable]{todonotes}
+\else
+\usepackage[textsize=footnotesize]{todonotes}
+\presetkeys{todonotes}{fancyline}{}
+\setlength{\marginparwidth}{1.3cm}
+\setlength{\marginparsep}{3pt}
+\fi
+
+\newcommand{\christoph}[1]{\todo[color=orange!20]{\textbf{Christoph:} #1}}
+\newcommand{\fritz}[1]{\todo[color=blue!20]{\textbf{Fritz:} #1}}
+\newcommand{\gianluca}[1]{\todo[color=red!20]{\textbf{Gianluca:} #1}}
+\newcommand{\jt}[1]{\todo{\textbf{JT:} #1}}
+\newcommand{\temptext}[1]{\textcolor{blue}{/* #1 */}}
+
+\usepackage{acronym}
+\usepackage{enumerate}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\pgfplotsset{
+    width=5cm, 
+    legend style={
+        font=\footnotesize,
+        %rounded corners=2pt
+    },
+    compat=newest
+}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{−}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.arrows}
+% timeline diagram
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+
+%\usepackage[cmex10]{amsmath} // TODO this clashes with url and tabularx
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{booktabs}
+\usepackage{xspace}
+\usepackage[pdftex]{hyperref}
+
+%\titleformat{\paragraph}[runin]
+%{\bfseries}{\theparagraph}{1em}{}
+
+\newtheorem{req}{Requirement}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Property}
+
+\usepackage[capitalize]{cleveref}
+\crefname{figure}{Fig.\@}{Figs.\@}
+\Crefname{figure}{Fig.\@}{Figs.\@}
+\crefname{table}{Tab.\@}{Tabs.\@}
+\Crefname{table}{Tab.\@}{Tabs.\@}
+\crefname{section}{Sect.\@}{Sects.\@}
+\Crefname{section}{Sect.\@}{Sects.\@}
+\crefname{req}{Req.\@}{Reqs.\@}
+\Crefname{req}{Req.\@}{Reqs.\@}
+
+\usepackage{paralist}
+\usepackage{crossreftools}
+
+\usepackage{fix-cm} % not needed if not using Computer Modern
+
+\DeclareMathAlphabet{\mathsfit}{T1}{\sfdefault}{\mddefault}{\sldefault}
+\SetMathAlphabet{\mathsfit}{bold}{T1}{\sfdefault}{\bfdefault}{\sldefault}
+
+\usepackage{listings}
+
+\lstdefinestyle{mystyle}{
+    inputpath=listings,
+    commentstyle=\color{teal},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{purple},
+    basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=none,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\usepackage{balance}
+

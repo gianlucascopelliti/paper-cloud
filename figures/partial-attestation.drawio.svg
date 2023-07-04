@@ -1,0 +1,82 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="611px" height="161px" viewBox="-0.5 -0.5 611 161" content="&lt;mxfile&gt;&lt;diagram id=&quot;1_mm60KxlqavihjB1a6C&quot; name=&quot;Page-1&quot;&gt;7Vlbb6M6EP41kc4+NMIY2uSxSS/7cKJdqdJeHl2YBKsEI2NyOb9+bTABbNLQLFl1qxOkCIbBl++b+TyGEZ6vd4+cpNGChRCPXCfcjfDdyHV9z5X/yrAvDQjh69Ky4jTUttrwRP8DbXS0NachZC1HwVgsaNo2BixJIBAtG+GcbdtuSxa3e03JCizDU0Bi2/qdhiIqrRPfqe2fga6iqmfk6DtrUjlrQxaRkG0bJnw/wnPOmCjP1rs5xAq8CpfyuYcjdw8D45CIPg9oJjYkzvXcvgGnSwpcj0/sq0lnLyACNXpnhGcsFzFNYH4AWBmXLBFzFjNePIDl8aB6na04CSnU9xKWgHKncWy630l7Jjh7AcM5JFkEoe5oA1xQSce/5BniryyjgrJE3ntmQrB1w+E2pit1Q7BUWom+CuRY5ATLAevoQl51rWes+iFZWs5uSXeq81nKqHr0fiNbUDGE1HAjkqoH1ruVivYx2WbeOM+KDmw6NENqgLBrmDQ9j8DWIPheulR3PR0qOlncKsq2deRVpqgRdJWN6FhfHVquw0Ge6Ijojg5sRcf828IKDM7yJCy4QUehN7gOCUyWgcW1vHMdTOB52cHNAFD6vgElsqFEXVgiPACYngXmQgZkQFmeSfOXpxO4GggufXXYSVf+OpEtfgayeCBkr2/Gfhtbz7exRb6NbeX3O9D6FrQPlK+3ckZvA/WNYXkx8LDTEZhd4LkDxOVNR1wmVzS5EhFcLWgYxqdQtNByit9l0MLISGKvAyu3I4lvBsBqYmFlQQNJeKtKDLXOxCTLaPDavCFsVRr2rHuqPIeYCLpp1yddM9U9fFULWQ2qa4I6mbabyFjOA9BPNesJs6HpiYYE4SsQVkMF8Idp9+JianGBx/L6VgjIBCkqAoVLyriwSJKxJo5VGk1N0CarcDAXuXWZJnhWJ4YzTLi7jgFolzQ4F1r/q6hoYIwUxo+QACcCGgDL8cjhqLyTpbzKUTwraiBZ5RNBRvhWnn2WNdw/af78AvtPfzElHm5TgqZ/khJkUfIxJMgzizMTrb4S5B8rmIeXIGRvn/qRIQWKi8qsI/ooQeXEq0r0XZFmYT09kzSLfbOhAUmzC3FfidqXFNSKkUGQq7qxqWRBROQ+VzUimPxbUGHvgv4e/TKXlM5q82L6ZdfqH0O/rMrnXP2yarGe+iUhI/uGW/GuIntlwLi7n5rIssWz88zeWLzG9CkVLGf9vwoOpYL2ux33A5bP3jFq/ojW9dguysVmc9hIdwof7Kj4oRAZ+/rqZ+Uuz+92GqziYn8KuVYtMbUzy31XiYWqLwUVe+Yevm9iyYbGaNI4sBEV3th36uP6IoJ7eCvRLbi2v7n1m5zwN9ufDizo9o7bU5JRfDHYfwS1MJfwrvfDlxKLirw3F0aVPqDfV4d3kvbWenru2yhrPe35Nuqtme3ddPdzZubJy/oLYOlef0fF978A&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="50" y="60" width="50" height="50" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 54.57 107.73 C 55.14 96.46 64.09 87.47 75 87.47 C 78.69 87.47 82.31 88.51 85.46 90.48 C 91.31 94.13 95.06 100.66 95.42 107.73 Z M 63.85 73.5 C 63.85 67.31 68.85 62.27 75 62.27 C 81.15 62.27 86.14 67.31 86.14 73.5 C 86.14 79.69 81.15 84.72 75 84.72 C 68.85 84.72 63.85 79.69 63.85 73.5 Z M 86.66 88.55 C 84.69 87.32 82.56 86.43 80.34 85.88 C 85.09 83.79 88.42 79.03 88.42 73.5 C 88.42 66.06 82.4 60 75 60 C 67.6 60 61.58 66.06 61.58 73.5 C 61.58 79.04 64.92 83.81 69.68 85.88 C 59.71 88.39 52.27 97.73 52.27 108.86 C 52.27 109.49 52.78 110 53.41 110 L 96.59 110 C 97.22 110 97.73 109.49 97.73 108.86 C 97.73 100.59 93.49 92.81 86.66 88.55 Z" fill="#232f3d" stroke="none" pointer-events="all"/>
+        <g fill="#232F3E" font-family="Helvetica" text-anchor="middle" font-size="14px">
+            <text x="74.5" y="129.5">
+                Verifier
+            </text>
+        </g>
+        <rect x="460" y="20" width="150" height="130" rx="19.5" ry="19.5" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="14px">
+            <text x="534.5" y="39.5">
+                CVM
+            </text>
+        </g>
+        <rect x="477.5" y="55" width="115" height="45" rx="6.75" ry="6.75" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g fill="#333333" font-family="Helvetica" text-anchor="middle" font-size="13px">
+            <text x="534.5" y="82.5">
+                Malicious OS
+            </text>
+        </g>
+        <rect x="477.5" y="110" width="115" height="20" rx="3" ry="3" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="13px">
+            <text x="534.5" y="125">
+                Firmware
+            </text>
+        </g>
+        <rect x="220" y="50" width="120" height="70" rx="10.5" ry="10.5" fill="rgb(255, 255, 255)" stroke="#000000" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="13px">
+            <text x="279.5" y="90">
+                Man-in-the-Middle
+            </text>
+        </g>
+        <path d="M 120 99 L 193.63 99" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 198.88 99 L 191.88 102.5 L 193.63 99 L 191.88 95.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="110" y="10" width="100" height="50" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="159.5" y="39.5">
+                3. Attestation report
+            </text>
+        </g>
+        <rect x="340" y="0" width="100" height="50" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="389.5" y="22.5">
+                1. Generate report with
+            </text>
+            <text x="389.5" y="36.5">
+                user data: Hash(pubkey)
+            </text>
+        </g>
+        <path d="M 360 60 L 443.63 60" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 448.88 60 L 441.88 63.5 L 443.63 60 L 441.88 56.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="110" y="110" width="100" height="50" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="159.5" y="132.5">
+                5. Open secure
+            </text>
+            <text x="159.5" y="146.5">
+                channel to MitM
+            </text>
+        </g>
+        <path d="M 200 60 L 150 60 Q 140 60 133.18 60 L 126.37 60" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 121.12 60 L 128.12 56.5 L 126.37 60 L 128.12 63.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="350" y="100" width="100" height="50" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="399.5" y="129.5">
+                2. Attestation report
+            </text>
+        </g>
+        <path d="M 50 70 Q 30 60 20 75 Q 10 90 20 95 Q 30 100 46.23 94.59" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 51.21 92.93 L 45.68 98.46 L 46.23 94.59 L 43.46 91.82 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="0" y="20" width="100" height="50" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="49.5" y="49.5">
+                4. Verify report
+            </text>
+        </g>
+        <path d="M 450 99 L 390 99 Q 380 99 373.18 99 L 366.37 99" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 361.12 99 L 368.12 95.5 L 366.37 99 L 368.12 102.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+    </g>
+</svg>

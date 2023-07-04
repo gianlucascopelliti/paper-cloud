@@ -1,0 +1,88 @@
+\section{Introduction}
+%
+Cloud computing is the backbone of digitalized societies, supporting today's
+cloud-native web service development paradigm. Increasingly, also industries
+that traditionally operated their own IT environments, e.g., telecommunication,
+manufacturing, and healthcare, are now moving to the cloud for better
+scalability, manageability, and cost reduction. However, this trend is
+accompanied by questions about the security and trustworthiness of
+\emph{\acp{CSP}} along with regulatory concerns about privacy, data protection,
+and data sovereignty: ``moving to the cloud'' involves moving large amounts of
+sensitive data, along with some of the responsibility to protect it, to a third
+party.
+
+Different forms of \emph{\ac{CC}} have surfaced to address such concerns,
+with \emph{\acp{TEE}}~\cite{schneider2022hardware} such as Intel SGX and
+TDX, AMD SEV-SNP, or ARM CCA promising to effectively take the cloud
+provider out of the \emph{\ac{TCB}}. These \acp{TEE} provide secure
+compartments on cloud servers that can run applications while protecting
+data in use from infrastructural threats and enabling the ``removal of even
+the cloud provider from the Trusted Computing
+Base''~\cite{confcon2022marketing}. At the same time they provide
+\emph{attestation} mechanisms to cryptographically verify that the
+unmodified application is indeed running in an authentic \ac{TEE}.  On
+paper, such a design allows for a drastic reduction of customers'
+dependency on cloud providers to adequately secure the cloud platform
+infrastructure -- firmware, OS, and virtualization layers -- and leaving
+only the hardware vendor that implements a \ac{TEE} as a root of trust.
+
+While early \acp{TEE} for server systems embedded \emph{enclaves} into user
+processes, the current market trend are \emph{\acp{CVM}} that place an entire
+tenant VM into a \ac{TEE}.  While this approach increases the \ac{TCB} within
+the \ac{TEE}, it simplifies the deployment of software in \acp{TEE} and reduces
+system-call performance overheads~\cite{akram2020performance} relative to
+enclaves, thus lowering the \ac{CC} adoption hurdle for customers. Consequently,
+cloud providers such as \ac{AWS}, Microsoft Azure, or \ac{GCP} have recently
+started marketing \ac{CVM} solutions as an easy fix for the security, privacy,
+and trustworthiness challenges outlined above.
+
+However, launching and attesting a \ac{CVM} is a different beast than the
+enclave-based \ac{CC} approach. A VM consists of layers of system software,
+including firmware, bootloader, kernel, and guest OS, as well as user space
+applications, with many components usually provided by the \ac{CSP}.
+%% All of these layers, which are provided by the CSP and other
+%% software vendors, need to be trusted, measured, and attested during the boot
+%% process of the \ac{CVM}.
+%% Moreover, a \ac{CVM} needs to be integrated into the cloud platform it is
+%% running on, requiring the configuration of storage and networking, but also
+%% additional components for monitoring by the cloud provider.
+%
+Given this large software stack running inside the \ac{CVM}, the issue of
+trustworthiness comes again into focus. Effectively removing the infrastructure,
+i.e., the \ac{CSP}, from the customer's \ac{TCB} requires
+\begin{inparaenum}
+\item an attestation infrastructure that allows to attest the authenticity of
+  both the \ac{TEE} hardware and \emph{all} the software running inside it, and
+\item transparency for software components provisioned by the \ac{CSP} in the
+  \ac{CVM}, e.g., by supplying the underlying source code alongside a
+  reproducible build process.
+\end{inparaenum}
+
+In this paper we examine \ac{CVM} offerings on public clouds along these two
+axes in order to evaluate the level of trust in the \ac{CSP} these \ac{CC}
+solutions still require.  In particular, we take a close look at the boot
+process and provided attestion mechanisms involved in the setup of AMD SEV-SNP
+\acp{CVM} on popular cloud providers. It turns out that there are shortcomings
+that prevent achieving confidential computing under infrastructural threats. In
+many cases this is due to missing attestation infrastructure or proprietary
+software components that need to be included in the \ac{CVM}.
+% , but a more
+% thorough discussion of issues and potential solutions will be given below.
+We make the following contributions:
+%
+\begin{itemize}
+%
+    \item We introduce a hierarchy of \emph{attestation levels} with
+increasingly stronger guarantees for \acp{CVM} and showcase what could go
+wrong with partial attestation at the lower levels of this hierarchy;
+%
+    \item We highlight that, if some components cannot be verified by the
+    \ac{CVM} owner independently, some blind trust in the \ac{CSP} is still
+    required when deploying services in commercial clouds;
+%
+    \item We conduct a case study into AMD SEV-SNP as provided by popular
+commercial \acp{CSP} to assess how products meet our attestation levels, and we
+explain shortcomings in current offerings.
+%
+\end{itemize}
+

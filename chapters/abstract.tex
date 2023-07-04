@@ -1,0 +1,19 @@
+A major drawback of cloud computing used to be the lack of confidentiality and
+verifiability of computations, making it impossible to use public commercial
+clouds to work with sensitive code or data. With the availability of Trusted
+Execution Environments (TEEs) came the promise of enabling confidential
+computations in the cloud. A number of big Cloud Service Providers (CSP) now
+supports the deployment of Confidential Virtual Machines (CVMs) that can be
+attested remotely, supposedly guaranteeing verifiable isolation and integrity,
+and removing potentially compromised or malicious infrastructure from the
+system's Trusted Computing Base (TCB). In this paper, we investigate this claim
+and examine the CVM infrastructure provided by commercial CSPs regarding the
+attestability of the TEE hardware and the entire CVM software stack, and
+transparency regarding software provisioned by the CSP. We develop a hierarchy
+of attestation levels to explain our findings and trust limitations. For the
+services analysed, we observe that many attestation steps can only partially be
+verified by the CVM owner. Thus, running CVMs on these CSPs' infrastructures
+does not allow full TCB reduction through independently verifiable attestation
+but requires trust in the CSP to deploy secure software and to truthfully report
+attestation data. Complete protection from infrastructural threats is thus not
+provided.

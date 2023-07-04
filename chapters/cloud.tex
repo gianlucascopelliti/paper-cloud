@@ -1,0 +1,171 @@
+\section{Exploring the Cloud Landscape}
+\label{section:cloud}
+
+\input{tables/levels.tex}
+
+We investigated current \ac{CC} offerings on public clouds, focusing on
+\sevsnp{} as the most widely available VM-based \ac{TEE}. Our evaluation is
+solely based on commercial cloud features under general availability or public
+preview. We found that only the three major \acp{CSP}, i.e., Microsoft Azure,
+\ac{GCP} and \ac{AWS}, offer to deploy \sevsnp{} \acp{CVM} on demand. We looked
+for VM-based confidential computing support in other \acp{CSP}, but they either
+supported plain \sev{} or only offered single-tenant bare-metal servers with
+\sevsnp{} hardware. While plain \sev{} does not provide integrity protection nor
+flexible attestation capabilities, bare-metal servers come at much higher costs
+and typically require a fixed monthly subscription. Instead, we were interested
+in the multi-tenant scenario where customers can deploy \acp{CVM} on demand on a
+shared infrastructure, with little to no control over the hypervisor.
+
+As discussed in \cref{sec:scenario}, our evaluation tried to determine the level
+of \emph{verifiability without trust} that can be achieved on such
+\acp{CSP}. Besides, we also considered the model where the verifier (partially)
+trusts the \ac{CSP} and relies on provided services and data, such as a custom
+attestation report or a proprietary attestation service.
+
+Results are shown in \cref{tbl:cloud-landscape} and based both on public
+documentation and direct experiments. Regarding the former, all references in
+\cref{eval:cloud-results}, except Github links, have been uploaded to the
+Internet Archive\footnote{\url{https://www.archive.org}} to provide a stable
+reference. Concerning the latter, our evaluation was made on \clouddate{}. Since
+this is a snapshot of the current state and features of clouds, some of our
+findings may not hold in the future. However, our evaluation framework is still
+useful to evaluate future offers in the \ac{CVM} area.
+
+\subsection{Results}
+\label{eval:cloud-results}
+
+In our experiments on \ac{AWS} and \ac{GCP}, we were able to fetch a raw
+attestation report from the AMD \ac{SP} via the \sevguest{} device, allowing to
+independently verify that the guest VM is indeed running in a up-to-date
+\sevsnp{} \ac{TEE}. Azure \acp{CVM}, instead, only provide access to an
+attestation report generated at boot time and stored in \ac{vTPM} non-volatile
+memory. As this report does not contain any freshness information chosen by the
+verifier, the latter cannot distinguish a legitimate attestation report from a
+replay attack and must rely on the \ac{CSP} to attest that the VM is indeed
+using \sevsnp. We tried to boot an \snp{}-aware kernel built from the AMDSEV
+repository~\cite{amdsevGithub}, yet we still could not access the AMD \ac{SP}.
+
+Regarding AL2, only \ac{AWS} offers an open source firmware that can be
+reproducibly built~\cite{awsUefi}. We successfully checked that the attestation
+report indeed reflects the correct measurement. Instead, Azure and \ac{GCP}
+guests boot a proprietary firmware whose code cannot be audited. To the best of
+our knowledge, firmware reference measurements are also not provided, meaning
+that the verifier cannot even compare the measurement in the attestation report
+against the expected value. However, we observed that both Azure and \ac{GCP}
+have a secure boot option that prevents \acp{CVM} from booting if the firmware
+is corrupted~\cite{azureDocsSecureBoot,googleDocsSecureBoot}, though we could
+obviously not experimentally verify this claim. Yet, tenants that are willing to
+trust their \ac{CSP} can be confident that a running firmware was not tampered
+with by an outsider attacker.
+
+All \acp{CSP} allow extending the measurements up to the kernel via a \ac{vTPM}.
+However, on \ac{AWS}~\cite{awsGithubvTPM} and \ac{GCP}~\cite{googleDocsvTPM} the
+\ac{vTPM} is implemented in the hypervisor, greatly increasing the \ac{TCB}.
+Azure, instead, exposes a \ac{vTPM} from within the \ac{CVM}
+firmware~\cite{azureDocsvTPM} which, as mentioned before, cannot be reviewed.
+Thus, no \ac{CSP} currently supports trustworthy attestation of kernel
+components.
+
+After kernel verification, the chain of measurements can be extended to the root
+filesystem via different approaches (\cref{section:att-examples}).  Hence, AL4
+is a natural extension of AL3, provided that the \ac{CSP} allows for the
+customization or upload of VM images by the guest owner. We experimentally
+verified that the former is indeed possible by installing a custom bootloader
+and kernel, as well as changing kernel command-line parameters, e.g., to enable
+Linux \ac{IMA}. Uploading images seems also feasible according to public
+documentation~\cite{awsDocsCustomImage,azureDocsCustomImage,googleDocsCustomImage},
+but we did not verify this. Still, for trustworthy attestation, the integrity of
+the root filesystem ultimately relies on the integrity of the boot chain up to
+the kernel: If the latter cannot be verified independently of the \ac{CSP},
+neither can the former.
+
+In summary, all \acp{CSP} provide the infrastructure to perform a full
+attestation (\emph{nominal AL4}), but they rely on either proprietary software
+or components outside the \ac{TEE} TCB, or both. On Azure, a verifier can obtain
+an attestation report but cannot verify its freshness, hence replay attacks are
+possible and the \ac{CSP} must be trusted for all attestation levels
+(\emph{trustworthy AL0}). On \ac{GCP}, one can fetch dynamic reports, but the
+firmware cannot be independently verified (\emph{trustworthy AL1}). Only
+\ac{AWS} allows to attest an auditable firmware, yet extending the chain of
+measurements to later boot stages uses a hypervisor-based \ac{vTPM} outside the
+\ac{TEE} (\emph{trustworthy AL2}).
+
+\subsection{Discussion}
+
+We showed that guest owners still require a significant amount of trust
+in the \acp{CSP} when using \ac{CVM} solutions in the cloud. This goes against
+the classic \ac{TEE} threat model, where the infrastructure is considered
+untrusted. There are two reasons for this:
+%
+\begin{inparaenum}
+    \item \ac{CSP} code is running inside the \ac{TEE} boundary, with no
+    possibility for review by the remote verifier, and
+    \item the attestation process involves \ac{CSP}-managed components.
+\end{inparaenum}
+%
+While running \ac{CSP} code in the \ac{CVM} is sometimes necessary (e.g., to
+configure network interfaces, mount devices, etc.), it is certainly possible to
+increase transparency towards the verifier, as demonstrated by \ac{AWS}'
+reviewable firmware. The second problem is mostly caused by a lack of
+customization options offered by \acp{CSP}. This is somewhat understandable
+since most cloud customers are looking for ease of use and ``one-click
+compliance'', where they are willing to trust the \ac{CSP} to perform security
+checks in their place. For advanced users, however, more customizability is
+desirable.
+
+%There is also a fundamental challenge with VM-based \acp{TEE}, which lies on the
+%management of measurements. As we have seen throughout the paper, there are
+%multiple software components that need to be measured, which may come from
+%different stakeholders. Besides, some of them undergo frequent updates that
+%further increase the number of "golden measurements" to manage. Here, it may be
+%desirable to rely on a trusted third party that keeps a database of acceptable
+%measurements and associated metadata.
+
+Our evaluation did not focus on userspace software that runs after booting the
+root filesystem, such as \texttt{cloud-init}~\cite{cloudInit} or
+\ac{CSP}-managed software like Azure Linux VM Agent~\cite{azureDocsLinuxAgent}.
+These agents take care of VM configuration and can execute privileged commands,
+like installing packages or updating the trusted SSH identities. Any such
+operation, if compromised, can thwart the security guarantees of
+\acp{CVM}. Hence, it is equally important to implement hardening measures in the
+root filesystem to, e.g., check \texttt{cloud-init} configuration files before
+executing them or disable unnecessary software.
+
+Lately, several companies like Anjuna~\cite{anjuna}, Edgeless
+Systems~\cite{edgelessSystems}, and Enclaive~\cite{enclaive} have started
+offering their own confidential computing solutions to customers, providing
+fully-managed confidential workloads in form of containers, virtual machines, or
+both, and supporting deployments on popular \acp{CSP}. Attestation of workloads
+is managed by a dedicated attestation service (which can also run within a
+\ac{TEE}) and is therefore transparent to the customer, who only receives a
+report indicating whether or not their deployment is verified. Such solutions
+can largely improve user experience and ease the adoption of confidential
+computing. However, when it comes to cloud deployments, they still depend on the
+\acp{CSP} and the confidential computing features offered by them.  Therefore,
+besides adding another third party to the trust model, such solutions cannot
+increase the \emph{trustworthy AL} shown in \cref{tbl:cloud-landscape}.
+Analogously, the same applies to third-party attestation services such as Intel
+Trust Authority~\cite{intelTrustAuthority}.
+
+A possible solution to the trust problem could leverage the live migration
+feature of \acp{TEE} to initialize a \ac{CVM} locally and then migrate its state
+to a remote host, where it continues its execution. Live migration is performed
+over a secure channel established between the \ac{TEE} modules in both hosts,
+preserving the confidentiality and integrity of the \ac{CVM}. Since the \ac{CVM}
+is initialized on a local platform, the guest owner has full control over its
+boot process and could therefore implement a full \emph{AL4} attestation
+strategy. Live \ac{CVM} migration is supported by AMD \sevsnp{} and Intel
+\ac{TDX}~\cite{AmdSevSnpWhitepaper,intelTdxMigration}. However, apart from some
+technical and organizational challenges (e.g., the guest owner needs proper
+\ac{TEE} hardware to initialize the \ac{CVM}), this workflow is currently not
+supported by any \ac{CSP} and thus we did not explore it further.
+
+Finally, we note that CC is still a relatively new technology and support for
+recent \acp{TEE} such as \sevsnp{} in the cloud has not yet reached maturity. On
+the evaluated \acp{CSP}, \acp{CVM} are currently available in selected regions
+only and, on \ac{GCP}, support is in public preview. Despite existing
+limitations, we see many efforts from \acp{CSP} to improve their offering,
+driven in part by the open source community and standardization bodies. For
+example, Google has recently open-sourced an unofficial tool to verify the
+firmware of \acp{CVM} running on \ac{GCP}~\cite{gceTcbVerifier}, which
+potentially allows reaching a trustworthy \emph{AL2}.

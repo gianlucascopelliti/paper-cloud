@@ -1,0 +1,105 @@
+\section{Background}
+
+\subsection{VM-based TEEs}
+%
+Confidential VMs are enabled by recent technologies such as AMD
+\sevsnp~\cite{AmdSevSnpWhitepaper}, Intel \ac{TDX}~\cite{intelTdxWhitepaper},
+and ARM \ac{CCA}~\cite{armCCA}. While the inner workings of these mechanisms may
+differ, they all allow to essentially wrap an entire VM, including its firmware,
+OS, and applications, into a \ac{TEE} and also attest its authenticity to a
+third party via a cryptographic protocol. This contrasts greatly with
+enclave-based \acp{TEE}, such as Intel SGX, which provide an isolated execution
+environment for a trusted partition of a larger untrusted user space
+application. 
+
+%As such, enclave-based \acp{TEE} are suitable for providing
+%confidential computing to smaller code bases, such as cryptographic libraries,
+%that can be tailored to communicate with the rest of the application and the
+%host OS via secure interfaces without prohibitive development overhead.
+
+On the other hand, VM-based \acp{TEE} are mostly transparent to the VM running
+inside it except for an adaptation layer, either in the guest system software or
+a paravisor~\cite{coconutSVSM}. Hence, they can provide \ac{CC} to larger
+applications deployed as VMs without changing application code. Moreover,
+unmodified \ac{CC} can be provided to containers via micro-VM container runtimes
+such as Kata~\cite{kata}. Thus, \acp{CVM} are considered to be more suitable for
+cloud-based deployments.
+%
+%Finally, software is easier to port between different
+%\ac{CVM} back-end technologies, since adapting a VM build process to is
+%conceivably more manageable than re-designing an application for different
+%enclave interfaces. 
+%
+Nevertheless, this ease-of-use comes with an increased \ac{TCB} in the \ac{TEE}.
+This not only increases the attack surface and risk for vulnerabilities, but
+also complicates attestation. 
+
+For instance, a recent study on AMD SEV found that measuring and encrypting even
+moderately sized portions of the initial CVM memory leads to prohibitively large
+boot times~\cite{severifast}. Also, build reproducibility becomes more complex
+the more different software components are combined into the initial VM image.
+Hence, measuring the complete VM along with the launch of the \ac{TEE} is
+considered impractical and current \ac{CVM} architectures instead follow a
+staged attestation approach that first creates a root of trust within the VM
+firmware. Subsequent attestation steps are then integrated into the VM boot
+process, leveraging measured/secure boot technologies to incrementally build a
+chain of trust for the loaded software modules.
+
+%However, for integration into a specific cloud platform, further configuration
+%is usually required, e.g., for storage, network connectivity, or authentication
+%and access control. The standard way to achieve this is to use the
+%\texttt{cloud-init} tool~\cite{cloudInit} which integrates into the OS boot
+%process and receives a \emph{cloud-config} file from the VM host. According to
+%this configuration file, the tool configures network interfaces, create user
+%accounts, set up secure communication, install applications, and run
+%user-defined scripts to ready the VM for service.
+
+\subsection{Measured Boot and Attestation}
+
+Even without consideration for \acp{TEE}, booting a VM is a complex process that
+is composed of several stages. The first components to run in such a Linux VM
+are its firmware, e.g., \ac{OVMF} and bootloader, e.g., GRUB. In some cases,
+such as with Direct Linux Boot~\cite{directLinuxBoot}, it is possible to skip
+the bootloader altogether and boot a kernel directly from the firmware. Once
+booted, the kernel extracts and mounts the initial RAM disk, e.g.,
+\emph{initramfs}, and executes the contained \emph{init} script. Its sole
+purpose is to mount the actual root filesystem for the VM containing the OS and
+user space applications which is provided as a block device mapped into VM
+memory. After mounting this filesystem, the script changes the root directory to
+it and launches the OS, which in turn may start user applications.
+
+The integrity and authenticity of the boot process is paramount to ensure the
+trustworthiness of any system. Measured boot~\cite{measuredBoot} is a common
+technique to produce evidence that a computer system has booted securely. While
+its implementation may differ between hardware architectures, measuring the boot
+process usually relies on a fixed and trusted initial firmware stage and a
+tamperproof \ac{RoTM}, such as a \ac{TPM}. The initial firmware stage may
+cryptographically measure itself and load subsequent boot code which, in turn,
+may continue the measurement process and extend the produced measurement
+results. The measurement process and storage of results, typically hashes, is
+handled by the \ac{RoTM}, and the authenticity of results can be verified at a
+later stage by a third party. For \acp{TEE}, the \ac{RoTM} is integrated with
+the \ac{TEE} implementation, e.g., in microcode for Intel SGX, or in a secure
+co-processor for AMD \sevsnp, called AMD \ac{SP}. When setting up a \ac{TEE}
+instance, the untrusted system interact with the \ac{RoTM} through secure
+interfaces to create trustworthy measurements of the instance. For \acp{CVM},
+measured boot is established by measuring the guest firmware along with the
+\ac{TEE} itself during setup. For subsequent measurements, a local \ac{RoTM}
+needs to be included to the firmware, e.g., via a \ac{vTPM}. Measurement results
+can then be certified by the \ac{RoTM} and sent to a remote verifier for
+verification.
+
+%Then the process for verifying the measurements of the guest boot process is the
+%same as for bare-metal machines.
+
+%Attestation is then handled via a
+%challenge-response protocol over a secure channel to the \ac{TEE} hardware
+%interfaces. 
+
+% The verifier sends a challenge to the \ac{RoTM},
+%which responds with the measurements and a freshness proof, e.g., by signing
+%measurement results along with the nonce. Given that the \ac{RoTM} is
+%tamper-proof and authenticated, the verifier is now satisfied that the boot
+%process was performed correctly.
+
+

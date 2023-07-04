@@ -1,0 +1,14 @@
+268a269,281
+> # TODO my stuff here.. is it even needed? maybe I can just use crypttab
+> 
+> echo "Enabling dm-integrity module.."
+> depmod -a
+> modprobe dm-integrity
+> 
+> #echo "Mapping device with dm-crypt.."
+> #echo -n test | cryptsetup luksOpen /dev/sda root -d -
+> 
+> echo "Mapping device with dm-integrity.."
+> echo "test" > password.txt
+> integritysetup open /dev/sda root --integrity hmac-sha256 --integrity-key-file password.txt --integrity-key-size 4
+> 

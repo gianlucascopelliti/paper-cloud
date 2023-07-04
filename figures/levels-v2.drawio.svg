@@ -1,0 +1,47 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="482px" height="62px" viewBox="-0.5 -0.5 482 62" content="&lt;mxfile&gt;&lt;diagram id=&quot;6ErLBB6WMr_QYbkwDCrU&quot; name=&quot;Page-1&quot;&gt;zVZRT4MwEP41vBpoyzYf5zZnosaHmaiPzXoDEqCkKxvz11vsdUDAxcRk+AK97+7au68fpR5dZNVa8SJ+lgJSj/ii8ujSI4SFxDxr4GSBWza1QKQSYaGgATbJJyDoI1omAvadQC1lqpOiC25lnsNWdzCulDx2w3Yy7a5a8Ah6wGbL0z76lggdW3QW+g3+AEkUu5UDHz0Zd8EI7GMu5LEF0ZVHF0pKbUdZtYC05s7xYvPuf/CeC1OQ698kkInNOPC0xOawMH1y3YIwzaOZy9y87szs6vRubN8ZH7VxEzpzWbWdyxNa/fKw4r0s1RbXY7ijXEWAUYRarC6llYc9rUFmYJYxAQpSrpNDd584bnd0jmsYMQMkZZgg1uNn/mSmNbTRwHbUDBfEm/uvq5WJj7kSR9Nmj0wly1xAPXlgUnYy1yjvgF7i5wBKQ3Wxded1KsRvK2BoHxul3iIUt0Q68f9OFpn+PzU56XTkxMaSk6umoycyrKf7RGXjaIjMRtTQ7B9qaOhICkfT0NCZRC+dSY+g8voPfG0dsWBEHYUDLLFhll42Xv2fnPCs+Hb4vDA3iavTFbKr0WXM5pLx7Wvd1OjqCw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 90 30 L 123.63 30" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 128.88 30 L 121.88 33.5 L 123.63 30 L 121.88 26.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="0" y="0" width="90" height="60" rx="9" ry="9" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="13px">
+            <text x="44.5" y="19">
+                AL1
+            </text>
+            <text x="44.5" y="51">
+                TEE hardware
+            </text>
+        </g>
+        <path d="M 220 30 L 253.63 30" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 258.88 30 L 251.88 33.5 L 253.63 30 L 251.88 26.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="130" y="0" width="90" height="60" rx="9" ry="9" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="13px">
+            <text x="174.5" y="19">
+                AL2
+            </text>
+            <text x="174.5" y="51">
+                Firmware
+            </text>
+        </g>
+        <path d="M 350 30 L 383.63 30" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 388.88 30 L 381.88 33.5 L 383.63 30 L 381.88 26.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="260" y="0" width="90" height="60" rx="9" ry="9" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="13px">
+            <text x="304.5" y="19">
+                AL3
+            </text>
+            <text x="304.5" y="51">
+                Kernel
+            </text>
+        </g>
+        <rect x="390" y="0" width="90" height="60" rx="9" ry="9" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="13px">
+            <text x="434.5" y="19">
+                AL4
+            </text>
+            <text x="434.5" y="51">
+                OS &amp; apps
+            </text>
+        </g>
+    </g>
+</svg>

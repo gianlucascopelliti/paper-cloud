@@ -1,0 +1,63 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="195px" height="291px" viewBox="-0.5 -0.5 195 291" content="&lt;mxfile&gt;&lt;diagram id=&quot;P3-0xnCg5D_Z64HbSy2n&quot; name=&quot;Page-1&quot;&gt;7Vhdb5swFP01PA7Z2ATy2KRpK23VKnXax6MVHGINMHKchOzXzwTzaViijaRT1DxE3INtfM71udhYaB5nj4Kk62ce0MhyQJBZ6N5ynCmC6j8HDgXgeZMCCAULCgjWwCv7RTUINLplAd20GkrOI8nSNrjkSUKXsoURIfi+3WzFo/ZTUxJSA3hdkshEv7FArgvUd0GNP1EWrssnQ6DvxKRsrIHNmgR834DQwkJzwbksruJsTqNcu1KXot/DwN1qYoIm8pwOTtFhR6Kt5jb/+qynJg8lX8G3SUDzLtBCsx0Vkikx7iIWJgqTPFWo+WQ9mbw5zRqQnskj5TGV4qCa6LuozK9eFgjreF+LDKcaWzcEdkqQ6MSG1dg1d3Wh6fdLgQwpHpiI94rQCT3GYI48221xd1EPd+Sa3PEI1F2D+kcqktyz1yeOJ1ckPjGIf361cstMSFwsakDSNFKrXTKebN5CDzS9oh6eoYdBmSbBXV5CVZTwRIEzxVYcvmsNjsEPFYAyuM9a0UFHg2JJIkKqIb+AaNCqx6Z6DW3cnvpQYoJGKpG7dhXv00s/4YUzNbnB+uTCjuQbvhVLqns1q25nIPfUQIUGxkDH9FW0z8qob2T0E90d38ZmatUaVYLNNlLwn3TOIy7qJK9YFHUgouu/KIQ23gsxC4J86Fntkj8m/nyXYDSgX2MdeH3viREsAqGh6DkeyZjMLfIB2ABgDRxtYntVXDslD0qj1PZSXZ2WxVRfdMJm+VAvVDDFk4pmiy44mJb/1HwYA9vBf+k/AG2Iu8NdyoLQ3GSVHkS340Hcs1m7mAfNvdq7B9/Ag8gb1YPIu5wH8aAH8e14sBLwGh40Dw1fFgsFPBERnHFqWvFE6pM9HEmO6ryo5ZiAvq3zpfQwzxLvNekaNQn4tu9O619rCbj+v1Qo0B3rYuXJPHiV5QneTnmqBBy/PKmw/mhWJKD+8ogWvwE=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="1" y="0" width="190" height="290" rx="28.5" ry="28.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="95.5" y="17.5">
+                CVM
+            </text>
+        </g>
+        <rect x="28.5" y="190" width="135" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="95.5" y="214.5">
+                Firmware
+            </text>
+        </g>
+        <rect x="28.5" y="120" width="135" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="95.5" y="144.5">
+                Kernel
+            </text>
+        </g>
+        <rect x="28.5" y="50" width="135" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="95.5" y="74.5">
+                OS &amp; applications
+            </text>
+        </g>
+        <path d="M 1 170 L 191 170" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="121" y="170" width="70" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="end" font-size="12px">
+            <text x="188.5" y="184.5">
+                Level 2
+            </text>
+        </g>
+        <path d="M 1 100.24 L 192.14 100" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="121" y="100" width="70" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="end" font-size="12px">
+            <text x="188.5" y="114.5">
+                Level 3
+            </text>
+        </g>
+        <path d="M 1 30.24 L 192.14 30" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="121" y="30" width="70" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="end" font-size="12px">
+            <text x="188.5" y="44.5">
+                Level 4
+            </text>
+        </g>
+        <rect x="31" y="260" width="130" height="20" rx="3" ry="3" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="10px">
+            <text x="95.5" y="273.5">
+                TEE Hardware
+            </text>
+        </g>
+        <path d="M -0.14 240.24 L 191 240" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="121" y="240" width="70" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="end" font-size="12px">
+            <text x="188.5" y="254.5">
+                Level 1
+            </text>
+        </g>
+    </g>
+</svg>

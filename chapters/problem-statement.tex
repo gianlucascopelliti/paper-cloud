@@ -1,0 +1,43 @@
+\section{Problem Statement}
+
+This work examines trust relations involved in the \ac{CVM} deployment process.
+To avoid potential confusion, we first delineate what we mean by ``trust'' and
+``trustworthiness'' in this context.
+
+Cloud service customers expect \acp{CSP} to run their cloud platform securely,
+e.g., that best practices are followed to prevent compromise by outsiders,
+customer data is sufficiently secured from leakage to other tenants, and
+policies are in place to curtail insider threats. Depending on their specific
+requirements, a tenant needs to perform a risk analysis before deploying their
+software at a given cloud platform given the information they have about
+it. This information is often incomplete as most \acp{CSP} run proprietary
+software to operate their platforms and customers must inherently rely on the
+promises of a \ac{CSP}'s marketing department for operational aspects that are
+opaque to them, while also soft metrics such as reputation, track record, or
+popularity may factor into their decision.
+
+Accepting any residual risk, the tenant can then be said to \emph{trust} the
+cloud platform. However, after making the decision, this trust becomes mandatory
+as the customer simply has to rely on the \ac{CSP} to hold up their end of the
+bargain. This trust is also perpetuated \emph{blindly} until objective evidence
+surfaces that it is no longer justified.
+
+We posit that the dual of this blind trust is \emph{trustworthiness}, which
+allows for continuous risk assessment by a cloud tenant through evidence of
+platform security obtained at run time. Such evidence may come in the form of
+attestation reports for software deployed in \acp{TEE} together with the
+possibility to independently verify the security of the TCB. The more such
+run-time evidence is provided, the greater the trustworthiness of an execution
+platform becomes, and the less blind trust is required.
+
+For the \ac{CVM} case this means that the \ac{CSP} not only has to provide the
+necessary infrastructure to attest the authenticity of all boot stages, but also
+provide transparency for the software components provisioned by the \ac{CSP} to
+allow security analysis of the remaining \ac{TCB}.
+
+This work aims to examine this issue more closely and proposes a hierarchy of
+attestation levels for the \ac{CVM} that allow to obtain increasing amounts of
+runtime evidence for the integrity and authenticity of a \ac{CVM}, thus allowing
+to increase trustworthiness. We then demonstrate the utility of this metric in
+an analysis of popular public cloud platforms offering AMD \sevsnp{}
+functionality judging the maximum level of trustworthiness achievable by them.

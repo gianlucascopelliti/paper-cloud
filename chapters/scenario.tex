@@ -1,0 +1,46 @@
+\section{CVM Attestation in Public Clouds}
+\label{sec:scenario}
+
+Above, we have discussed the different attestation levels a verifier can achieve
+when evaluating the authenticity and integrity of a deployed \ac{CVM}.  However,
+who exactly plays the role of verifier depends greatly on the application
+scenario and the trust relations between the involved parties.  In this work, we
+focus on a scenario where a tenant wants to deploy a \ac{CVM} as guest owner on
+a cloud platform, acting as the verifier in the attestation process. Afterwards,
+attestation results may also be exposed to end users as
+well~\cite{galanou2023revelio}. While different tenants may have different trust
+relations with a given \ac{CSP} and lower attestation levels may suffice for
+them in practice, we assume here that the tenant wants to reduce the required
+trust in the infrastructure provider as much as possible and achieve a high
+level of trustworthiness for the \ac{CVM} solution via attestation. 
+
+Here, the measurement reports used during attestation should ideally be
+verifiable independently of the \ac{CSP}. In particular, attestation reports
+produced by the \ac{TEE} hardware need to be available to the verifier. In
+addition, the verifier needs to be able to identify trusted software deployed in
+the \ac{TEE}, i.e., they need to know the corresponding reference measurements
+for the firmware, kernel, user applications, etc. A \ac{CSP} may provide these
+reference values so that the authenticity of the deployed software can be
+established. However, this results in a notion of verifiability that still
+relies on trust in the \ac{CSP} and in the security of the deployed software. In
+principle, a trusted third party such as Intel Trust
+Authority~\cite{intelTrustAuthority} could certify the security of that software
+and publish the corresponding reference values, but that just shifts the
+required trust to a different entity.
+
+A stronger \emph{verifiability without trust} entails that the verifier can
+inspect the source code of software deployed in the \ac{TEE} and obtain the
+reference measurements via a reproducible build process. Having access to the
+source code allows the verifier to conduct their own security analysis of the
+code and judge its trustworthiness. Of course, if the code is publicly
+available, this review can also be performed by the open source community, but
+this would again introduce required trust into the picture.
+
+Overall, for our cloud \ac{CVM} scenario, the tenant wants to achieve
+verifiability without trust for as high an attestation level as possible. Even
+if a high \emph{nominal} AL can be achieved with the help of the \ac{CSP}, still
+being
+forced to trust the \ac{CSP} blindly for the measurement values and deployed
+software reduces the trustworthiness. We introduce the term \emph{trustworthy
+AL} to denote the maximum, effective attestation level the tenant can achieve as
+a verifier without trust into the public cloud provider.

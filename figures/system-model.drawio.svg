@@ -1,0 +1,124 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="510px" height="342px" viewBox="-0.5 -0.5 510 342" content="&lt;mxfile&gt;&lt;diagram id=&quot;OslUhLYjjUSNtW8yx6Kp&quot; name=&quot;Page-1&quot;&gt;7Vlbb+MoFP41eY0M2E7y2FzaWWmqqdTd2Z1HxsYxqmMswLnsr1+w8RVnkm7bTCJVI3XCB4bDdz4fHw4jtNjsHzjO4kcWkmQEnXA/QssRhDME1F8NHErAm3klsOY0LCHQAM/0X2JAx6A5DYnoDJSMJZJmXTBgaUoC2cEw52zXHRaxpLtqhtfEAp4DnNjo3zSUcYlOPafBvxC6jquVgWN6NrgabAAR45DtWhBajdCCMybLX5v9giSau4qX8rn7I721YZyk8pwHYPnAFie52dsfacSxkDwPZM6JsVIeqq1zlqch0U+DEZpvCZdU8XKX0HWqMMkyhdpGGLv0cLJvQcaoB8I2RPKDGmJ6ETKKMAoBviFs1/ANpgaLW1zDimpsfLyu525oUD8ME8OsIIuVP1crBXzBPNzhk6xENEkWLGG86ERBQLwoUrhilb2QVg/y0QyF78TYxOkwhtAAY2CQsbcT5lqELb4/3gJLdUjpsOTZLIH30BWwhWWRREIVakwzZan6b662yw//qLZTNX7oxtirmst9u3N5MK2jfEnM10R2XKeX/SWBnCRY0m03Ag6RYR59YlStWhMPUY94fzZ2kAr9U8d3PeD3JhQs5wExc/QIro06j3M7xL2O87GjN9Xm3XHRCeaL1hPhVBlK+GvcAS/jDuT23NGXd2mT5YCTfgUuGru+M5mhqeO6HnLQhznWDjqvcizoOhWeepuEokTe6exBAUGChaBBBd9TbWYx5VEvlzuvWPttL6IPew7znA/z0PT6wh36PeEOTb2xCnJwZmLe5KM4H8jo3vJWTC76VrhX81bUecIJD1kTubNu4gr7Ex0JrP/H1XY28V19ciKqvjh9l4sXIoPY+IzlMqGpSrGq05EGI5bKVtKl/t3rZedrjkNKmj4jmF72VgxfWtmbGRxiERd5n9M6M3zFP0nyxASVlOmzw08mJdscPVRg0wqULfqTWhhsjoYAVm2zY70OFlm5u4ju9eLzTHNO+GqrZhBGl+r8lekHNvu1PqmO8U6441wUCxzV7Pnppt//Og4cY1wTJdvZZoW9JdkcSMpXaaiAv8SnQK5VIMiBlxOIZwmkOOb6yl1AE/SI0zzCRR3gUzBXIhgwhcMfqksIxrcE85ATIVuS+bZLP7VyrVqB7gW1MrG00q8s1qJ54mxLw0/dXKtuQFVDuYRu7DPjM9H5dZ61FEN/XaRW+5THvNqWgIEsJ/V9uaFhqOeeNxXM5sBp8TrA/lGqod9LEOGZVVsE34HrmcX1kmQJ0/YN1W9viNZ+tfHcYvh70Fqt1aLVRDgFlhcJLSnH9Z3CvWCRLH+2BwRskylC9dt/ww7p305Mphd0CLAcUut8x/hLwnAoWoyPFnB056yLsMOJyJObpt6zKu92NP846u1yVFGj0Pap8C2k4l/G6rMubAew6ObjkAfOuMaEA9dN6PW3TarZ3BuX5aTm8h2t/gM=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="164" y="48" width="180" height="200" rx="27" ry="27" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="253.5" y="65.5">
+                Infrastructure
+            </text>
+        </g>
+        <rect x="199" y="218" width="110" height="20" rx="3" ry="3" fill="#cce5ff" stroke="#36393d" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="253.5" y="232.5">
+                TEE Hardware
+            </text>
+        </g>
+        <rect x="199" y="98" width="115" height="100" rx="15" ry="15" fill="#cce5ff" stroke="#36393d" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="256" y="152.5">
+                CVM
+            </text>
+        </g>
+        <path d="M 59 157.03 L 192.65 148.41" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 197.88 148.07 L 191.12 152.02 L 192.65 148.41 L 190.67 145.03 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 59 31.46 L 161.76 55.17" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 166.87 56.35 L 159.26 58.19 L 161.76 55.17 L 160.84 51.36 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 455.09 80.42 L 320.1 121.16" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 460.11 78.91 L 454.42 84.28 L 455.09 80.42 L 452.4 77.58 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 315.07 122.68 L 320.76 117.3 L 320.1 121.16 L 322.78 124.01 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 59 273.16 L 192.94 229.95" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 197.94 228.34 L 192.35 233.82 L 192.94 229.95 L 190.2 227.16 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 454.99 207.21 L 320.19 174.5" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 460.1 208.44 L 452.47 210.19 L 454.99 207.21 L 454.12 203.39 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 315.09 173.26 L 322.71 171.51 L 320.19 174.5 L 321.06 178.32 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="459" y="48" width="48" height="48" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 463.39 93.82 C 463.94 83 472.52 74.38 483 74.38 C 486.54 74.38 490.01 75.37 493.04 77.26 C 498.66 80.76 502.26 87.04 502.61 93.82 Z M 472.3 60.96 C 472.3 55.02 477.1 50.18 483 50.18 C 488.9 50.18 493.7 55.02 493.7 60.96 C 493.7 66.9 488.9 71.73 483 71.73 C 477.1 71.73 472.3 66.9 472.3 60.96 Z M 494.2 75.41 C 492.31 74.23 490.25 73.37 488.13 72.84 C 492.68 70.84 495.88 66.27 495.88 60.96 C 495.88 53.81 490.1 48 483 48 C 475.9 48 470.12 53.81 470.12 60.96 C 470.12 66.28 473.32 70.85 477.89 72.85 C 468.32 75.25 461.18 84.22 461.18 94.91 C 461.18 95.51 461.67 96 462.27 96 L 503.73 96 C 504.33 96 504.82 95.51 504.82 94.91 C 504.82 86.97 500.75 79.49 494.2 75.41 Z" fill="#232f3d" stroke="none" pointer-events="all"/>
+        <g fill="#232F3E" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="482.5" y="113.5">
+                Verifier
+            </text>
+        </g>
+        <rect x="459" y="190" width="48" height="48" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 463.39 235.82 C 463.94 225 472.52 216.38 483 216.38 C 486.54 216.38 490.01 217.37 493.04 219.26 C 498.66 222.76 502.26 229.04 502.61 235.82 Z M 472.3 202.96 C 472.3 197.02 477.1 192.18 483 192.18 C 488.9 192.18 493.7 197.02 493.7 202.96 C 493.7 208.9 488.9 213.73 483 213.73 C 477.1 213.73 472.3 208.9 472.3 202.96 Z M 494.2 217.41 C 492.31 216.23 490.25 215.37 488.13 214.84 C 492.68 212.84 495.88 208.27 495.88 202.96 C 495.88 195.81 490.1 190 483 190 C 475.9 190 470.12 195.81 470.12 202.96 C 470.12 208.28 473.32 212.85 477.89 214.85 C 468.32 217.25 461.18 226.22 461.18 236.91 C 461.18 237.51 461.67 238 462.27 238 L 503.73 238 C 504.33 238 504.82 237.51 504.82 236.91 C 504.82 228.97 500.75 221.49 494.2 217.41 Z" fill="#232f3d" stroke="none" pointer-events="all"/>
+        <g fill="#232F3E" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="482.5" y="255.5">
+                End User
+            </text>
+        </g>
+        <rect x="11" y="258" width="48" height="48" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 15.39 303.82 C 15.94 293 24.52 284.38 35 284.38 C 38.54 284.38 42.01 285.37 45.04 287.26 C 50.66 290.76 54.26 297.04 54.61 303.82 Z M 24.3 270.96 C 24.3 265.02 29.1 260.18 35 260.18 C 40.9 260.18 45.7 265.02 45.7 270.96 C 45.7 276.9 40.9 281.73 35 281.73 C 29.1 281.73 24.3 276.9 24.3 270.96 Z M 46.2 285.41 C 44.31 284.23 42.25 283.37 40.13 282.84 C 44.68 280.84 47.88 276.27 47.88 270.96 C 47.88 263.81 42.1 258 35 258 C 27.9 258 22.12 263.81 22.12 270.96 C 22.12 276.28 25.32 280.85 29.89 282.85 C 20.32 285.25 13.18 294.22 13.18 304.91 C 13.18 305.51 13.67 306 14.27 306 L 55.73 306 C 56.33 306 56.82 305.51 56.82 304.91 C 56.82 296.97 52.75 289.49 46.2 285.41 Z" fill="#232f3d" stroke="none" pointer-events="all"/>
+        <g fill="#232F3E" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="34.5" y="323.5">
+                TEE
+            </text>
+            <text x="34.5" y="337.5">
+                Manufacturer
+            </text>
+        </g>
+        <rect x="11" y="128" width="48" height="48" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 15.39 173.82 C 15.94 163 24.52 154.38 35 154.38 C 38.54 154.38 42.01 155.37 45.04 157.26 C 50.66 160.76 54.26 167.04 54.61 173.82 Z M 24.3 140.96 C 24.3 135.02 29.1 130.18 35 130.18 C 40.9 130.18 45.7 135.02 45.7 140.96 C 45.7 146.9 40.9 151.73 35 151.73 C 29.1 151.73 24.3 146.9 24.3 140.96 Z M 46.2 155.41 C 44.31 154.23 42.25 153.37 40.13 152.84 C 44.68 150.84 47.88 146.27 47.88 140.96 C 47.88 133.81 42.1 128 35 128 C 27.9 128 22.12 133.81 22.12 140.96 C 22.12 146.28 25.32 150.85 29.89 152.85 C 20.32 155.25 13.18 164.22 13.18 174.91 C 13.18 175.51 13.67 176 14.27 176 L 55.73 176 C 56.33 176 56.82 175.51 56.82 174.91 C 56.82 166.97 52.75 159.49 46.2 155.41 Z" fill="#232f3d" stroke="none" pointer-events="all"/>
+        <g fill="#232F3E" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="34.5" y="193.5">
+                Guest
+            </text>
+            <text x="34.5" y="207.5">
+                Owner
+            </text>
+        </g>
+        <rect x="11" y="0" width="48" height="48" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 15.39 45.82 C 15.94 35 24.52 26.38 35 26.38 C 38.54 26.38 42.01 27.37 45.04 29.26 C 50.66 32.76 54.26 39.04 54.61 45.82 Z M 24.3 12.96 C 24.3 7.02 29.1 2.18 35 2.18 C 40.9 2.18 45.7 7.02 45.7 12.96 C 45.7 18.9 40.9 23.73 35 23.73 C 29.1 23.73 24.3 18.9 24.3 12.96 Z M 46.2 27.41 C 44.31 26.23 42.25 25.37 40.13 24.84 C 44.68 22.84 47.88 18.27 47.88 12.96 C 47.88 5.81 42.1 0 35 0 C 27.9 0 22.12 5.81 22.12 12.96 C 22.12 18.28 25.32 22.85 29.89 24.85 C 20.32 27.25 13.18 36.22 13.18 46.91 C 13.18 47.51 13.67 48 14.27 48 L 55.73 48 C 56.33 48 56.82 47.51 56.82 46.91 C 56.82 38.97 52.75 31.49 46.2 27.41 Z" fill="#232f3d" stroke="none" pointer-events="all"/>
+        <g fill="#232F3E" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="34.5" y="65.5">
+                Infrastructure
+            </text>
+            <text x="34.5" y="79.5">
+                Provider
+            </text>
+        </g>
+        <rect x="89" y="8" width="110" height="32" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="143.5" y="21.5">
+                Set up
+            </text>
+            <text x="143.5" y="35.5">
+                infrastructure
+            </text>
+        </g>
+        <rect x="59" y="118" width="110" height="32" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="113.5" y="138.5">
+                Deploy CVM
+            </text>
+        </g>
+        <rect x="99" y="266" width="110" height="32" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="153.5" y="272.5">
+                Provide TEE
+            </text>
+            <text x="153.5" y="286.5">
+                hardware/software
+            </text>
+            <text x="153.5" y="300.5">
+                components
+            </text>
+        </g>
+        <rect x="359" y="150" width="110" height="32" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="413.5" y="163.5">
+                Deploy workloads
+            </text>
+            <text x="413.5" y="177.5">
+                get results
+            </text>
+        </g>
+        <rect x="344" y="48" width="125" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" text-anchor="middle" font-size="12px">
+            <text x="406" y="60.5">
+                Verify trustworthiness
+            </text>
+            <text x="406" y="74.5">
+                of CVM
+            </text>
+        </g>
+    </g>
+</svg>
